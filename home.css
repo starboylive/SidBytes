@@ -160,6 +160,19 @@
     color: aliceblue;
     cursor: pointer;
 }
+#home69{
+    font-family: monospace;
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: blue;
+}
+#home69:hover{
+    background-color: blue;
+    color:rgb(255, 230, 0);
+    cursor: pointer;
+}
 .gap32{
     height: 1vh;
     /* background-color: cyan;ś */
@@ -194,7 +207,7 @@
     float: right;
     margin-top: -0.050rem ;
     /* margin-right: 0.5rem; */
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     background-color: yellowgreen;
     color: black;
     border-radius: 0.5rem;
