@@ -6,6 +6,12 @@
     "url": "https://medisphere-v1.vercel.app"
   },
   {
+    "title": "-- ByteList - Todo App",
+    "description": "Byte List is a minimalist to-do list application designed to help users organize tasks efficiently with a clean and distraction-free interface. It focuses on simplicity, usability, and performance, making everyday task management seamless and intuitive.",
+    "tech": ["HTML", "CSS", "JavaScript"], 
+    "url": "https://byte-list.vercel.app"
+  },
+  {
     "title": "-- Sidframe - Blog website",
     "description": "Sidframe is my personal blog where I share insights on technology, creativity, and self-growth, wrapped in a minimal design and smooth, distraction-free reading experience.",
     "tech": ["HTML", "CSS", "JavaScript"], 
