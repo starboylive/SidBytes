@@ -6,8 +6,16 @@
     color: aliceblue;
   }
 
+  body{
+    background-color: transparent;
+  }
+
+  html{
+    background-color: transparent;
+  }
+
 .main{
-    /* background-color: aqua; */
+    background-color: transparent;
     height: 70vh;
     width: 70vh;
     margin: auto;
@@ -20,7 +28,7 @@
     height: 3vh;
     width: 50vh;
     font-family:  monospace;
-    /* background-color: aqua; */
+    background-color: transparent; 
     gap: 2.5rem;
     display: flex;
     justify-content: flex-start;
@@ -434,4 +442,14 @@
 .cursor {
     margin-top: 0.2rem;
     animation: blink 0.5s steps(2, start) infinite
+}
+
+#summer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
 }
