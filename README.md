@@ -1,6 +1,6 @@
 # 👋 Hey, I'm Siddu
 
-🎓 Second-year BTech student from India.
+🎓 Third-year BTech student from India.
 💻 Passionate about Competitive Programming, Web Development, and building impactful projects.
 🚀 Currently learning Data Structures & Algorithms, Full-Stack Development, and Machine Learning.
 
