@@ -443,7 +443,7 @@
     margin-top: 0.2rem;
     animation: blink 0.5s steps(2, start) infinite
 }
-
+/* 
 #summer {
   position: fixed;
   top: 0;
@@ -452,4 +452,4 @@
   height: 100%;
   pointer-events: none;
   z-index: -1;
-}
+} */
