@@ -64,9 +64,10 @@ A startup idea focused on doctor-consulted diet plans and healthy food delivery.
 
 ## 📫 Connect With Me
 
-- GitHub: https://github.com/yourusername
-- LinkedIn: https://linkedin.com/in/yourusername
-- Instagram: @sidbytes
+- GitHub: https://github.com/starboylive  
+- LinkedIn: https://linkedin.com/in/starboylive
+- Instagram: @sidiswater
+- Twitter/X: @sidbytess
 
 ---
 
