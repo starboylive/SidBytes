@@ -8,8 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
       data.forEach(item => {
+        const isUnderDevelopment = Object.prototype.hasOwnProperty.call(item, 'underDevelopment')
+          ? Boolean(item.underDevelopment)
+          : /under development/i.test(item.title);
         const card = document.createElement("div");
-        card.className = "portfolio-card";
+        card.className = `portfolio-card${isUnderDevelopment ? " portfolio-card--dev" : ""}`;
 
         card.innerHTML = `
           <a href="${item.url}" target="_blank" class="card-link">

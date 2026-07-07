@@ -39,6 +39,24 @@
   transition: 0.2s ease all;
 }
 
+.portfolio-card--dev {
+  background: linear-gradient(135deg, #6f8f7b 0%, #8fae95 100%);
+  box-shadow: 0 10px 25px rgba(72, 96, 79, 0.2);
+}
+
+.portfolio-card--dev .portfolio-desc,
+.portfolio-card--dev .tech-stack {
+  background: transparent;
+}
+
+.portfolio-card--dev .tech {
+  background: rgba(47, 69, 54, 0.7);
+}
+
+.portfolio-card--dev .portfolio-title {
+  color: #2d4034;
+}
+
 .portfolio-card::before {
   content: "";
   height: 0.6rem;
@@ -59,15 +77,41 @@
 .portfolio-title {
   font-size: 1.055rem;
   margin-bottom: 0.8rem;
-  /* color: #0f0f0f; */
   color: #551A8B;
   font-weight: 550;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   border-radius: 0.3rem;
   margin-top: -1rem;
-  margin-left: -4rem;
-  margin-right: -4rem;
-  padding-left: 3.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: inline-block;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+  color: #f8fff9;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  z-index: 6;
+  pointer-events: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+.portfolio-card--dev .card-badge {
+  background: rgba(36,58,47,0.9);
+  color: #f1f7f2;
 }
 
 .portfolio-desc {

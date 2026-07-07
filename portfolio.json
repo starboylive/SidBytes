@@ -1,38 +1,51 @@
 [
   {
+    "title": "-- PeerlySt. (Under development)",
+    "description": "Peerlyst is a modern college community platform where students connect, collaborate, share resources, and discover opportunities—all in one place.",
+    "tech": ["React", "NodeJS", "ExpressJS", "MongoDB", "HTML5", "CSS", "Javascript"],
+    "url": "https://github.com/starboylive/PeerlySt",
+    "underDevelopment": true
+  },
+  {
     "title": "-- Medisphere - Hackathon Project (Top 10 Finalist!)",
     "description": "A streamlined healthcare platform connecting organ donors, recipients, and medical professionals. Built to modernize the organ donation process with smart tech, faster communication, and a compassionate, life-saving focus.",
     "tech": ["HTML", "CSS", "JavaScript"], 
-    "url": "https://medisphere-v1.vercel.app"
+    "url": "https://medisphere-v1.vercel.app",
+    "underDevelopment": false
   },
   {
     "title": "-- ByteList - Todo App",
     "description": "Byte List is a minimalist to-do list application designed to help users organize tasks efficiently with a clean and distraction-free interface. It focuses on simplicity, usability, and performance, making everyday task management seamless and intuitive.",
     "tech": ["HTML", "CSS", "JavaScript"], 
-    "url": "https://byte-list.vercel.app"
+    "url": "https://byte-list.vercel.app", 
+    "underDevelopment": false
   },
   {
     "title": "-- Sidframe - Blog website",
     "description": "Sidframe is my personal blog where I share insights on technology, creativity, and self-growth, wrapped in a minimal design and smooth, distraction-free reading experience.",
     "tech": ["HTML", "CSS", "JavaScript"], 
-    "url": "https://sidframe.vercel.app/"
+    "url": "https://sidframe.vercel.app/",
+    "underDevelopment": false
   },
   {
     "title": "-- Sidiot Media - Graphic n' Motion Design Portfolio",
     "description": "Sidiotic Media is my visual portfolio showcasing my work in graphic design, motion graphics, and video editing, focused on bold visuals, storytelling, and impactful creative direction.",
     "tech": ["HTML", "CSS"], 
-    "url": "https://sidiotmedia.vercel.app/"
+    "url": "https://sidiotmedia.vercel.app/",
+    "underDevelopment": true
   },
   {
     "title": "-- Greentrek - Hackathon Project (First-Hackathon!)",
     "description": "We created a website during 24-hour hackathon to spread awareness on sustainability and GreenTech. Our project features interactive elements and educational content to engage users in eco-friendly practices.",
     "tech": ["HTML", "CSS", "JavaScript"], 
-    "url": "https://greenterk.vercel.app/"
+    "url": "https://greenterk.vercel.app/",
+    "underDevelopment": false
   },
   {
     "title": "-- Portfolio",
     "description": "A minimal, terminal-inspired portfolio showcasing my projects, skills, and tools. Designed for focus, clarity, and a clean developer-first experience.",
     "tech": ["HTML", "CSS", "JavaScript", "JSON"], 
-    "url": "https://sidbits.vercel.app/"
+    "url": "https://sidbits.vercel.app/",
+    "underDevelopment": false
   }
 ]
