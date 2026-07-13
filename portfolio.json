@@ -1,5 +1,12 @@
 [
   {
+    "title": "-- DevSync v1.0.0 ",
+    "description": "DevSync is a productivity-focused Chrome extension that helps developers stay consistent with daily tasks, coding platform shortcuts, and progress tracking. Designed to turn every new tab into a focused workspace that encourages better coding habits.",
+    "tech": ["React", "Developer Tools", "Chrome Extension", "Manifest.v3", "Browser Extension", "JavaScript", "HTML5", "CSS" ],
+    "url": "https://github.com/starboylive/DevSync",
+    "underDevelopment": false
+  },
+  {
     "title": "-- PeerlySt. (Under development)",
     "description": "Peerlyst is a modern college community platform where students connect, collaborate, share resources, and discover opportunities—all in one place.",
     "tech": ["React", "NodeJS", "ExpressJS", "MongoDB", "HTML5", "CSS", "Javascript"],
