@@ -296,7 +296,8 @@
     align-items: center;
     padding-right: 1rem;
     font-size: 0.98rem;
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: monospace;
+    font-weight: 500; 
     border: 0;
 }
 .ps-btn:hover{
@@ -396,7 +397,12 @@
             display: inline-flex;
             justify-content:center;
             flex-direction: column;
+    
         }
+         .link{
+            font-weight: 500;
+         }
+
 
     }
 
@@ -453,7 +459,9 @@
         display: inline-flex;
         justify-content:center;
         flex-direction: column;
+
     }
+         
 
 }
 
