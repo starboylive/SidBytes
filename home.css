@@ -380,6 +380,173 @@
     font-size: 1.2rem;
 }
 
+.cp-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: transparent;
+    flex-wrap: wrap;
+}
+
+/* LeetCode Widget Styling */
+.leetcode-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #282828 !important;
+    border: 1px solid #3c3c3c !important;
+    border-radius: 12px;
+    padding: 1.2rem;
+    gap: 1.5rem;
+    width: 320px;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.leetcode-card * {
+    background-color: transparent !important;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.leetcode-progress-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    background-color: transparent !important;
+}
+
+.leetcode-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    background-color: transparent !important;
+}
+
+.leetcode-svg .track-bg {
+    fill: none;
+    stroke-width: 4.5px;
+    background-color: transparent !important;
+}
+
+.leetcode-svg .easy-bg {
+    stroke: rgba(0, 184, 163, 0.12);
+}
+.leetcode-svg .med-bg {
+    stroke: rgba(255, 192, 30, 0.12);
+}
+.leetcode-svg .hard-bg {
+    stroke: rgba(239, 71, 67, 0.12);
+}
+
+.leetcode-svg .segment {
+    fill: none;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.8s ease, stroke-dashoffset 0.8s ease;
+    background-color: transparent !important;
+}
+
+.leetcode-svg .easy-seg {
+    stroke: rgb(0, 184, 163);
+}
+.leetcode-svg .med-seg {
+    stroke: rgb(255, 192, 30);
+}
+.leetcode-svg .hard-seg {
+    stroke: rgb(239, 71, 67);
+}
+
+.leetcode-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent !important;
+}
+
+.leetcode-center-text .solved-count {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+.leetcode-center-text .solved-count .total-count {
+    font-size: 0.75rem;
+    color: #8a8a8a !important;
+    font-weight: 400;
+    background-color: transparent !important;
+}
+
+.leetcode-center-text .solved-label {
+    font-size: 0.7rem;
+    color: rgb(0, 184, 163) !important;
+    font-weight: 600;
+    margin-top: 1px;
+    background-color: transparent !important;
+}
+
+.leetcode-center-text .attempting-label {
+    font-size: 0.62rem;
+    color: #8a8a8a !important;
+    margin-top: 4px;
+    background-color: transparent !important;
+}
+
+.leetcode-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    width: 100%;
+    background-color: transparent !important;
+}
+
+.leetcode-stats .stat-box {
+    background-color: #333333 !important;
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.leetcode-stats .stat-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background-color: transparent !important;
+}
+
+.leetcode-stats .easy-text {
+    color: rgb(0, 184, 163) !important;
+}
+.leetcode-stats .med-text {
+    color: rgb(255, 192, 30) !important;
+}
+.leetcode-stats .hard-text {
+    color: rgb(239, 71, 67) !important;
+}
+
+.leetcode-stats .stat-value {
+    font-size: 0.82rem;
+    color: #ffffff !important;
+    font-weight: 700;
+    margin-top: 2px;
+    background-color: transparent !important;
+}
+
 
     @media (max-width: 768px) {
         .linkstation {
@@ -390,7 +557,10 @@
     
         .cp-links{
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            gap: 1.5rem;
         }
 
         .cp-list{
@@ -452,7 +622,10 @@
 
     .cp-links{
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        gap: 1.5rem;
     }
 
     .cp-list, .link{

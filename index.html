@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidbytes</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css" integrity="sha512-F/yRpRY8sctKzP7exU5PLGejwg/QtjDX6CIy/41nApe7JqdZgCcCzJTNq9Rcp/XwbeeTGillGevBakruY15pxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="images/zuck-modified.png" type="image/x-icon">
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -90,6 +91,41 @@
                 <li><a class="ps-btn link" href="https://www.hackerrank.com/profile/ramadalivenkate1" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/hackerRank.png" alt="logo"></span>HackerRank</button></a></li>
                 <li><a class="ps-btn link" href="https://www.geeksforgeeks.org/profile/sidwaters" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/gfg.png" alt="logo"></span>GeeksForGeeks</button></a></li>
             </ul>
+
+            <div class="leetcode-card" id="leetcode-card">
+                <div class="leetcode-progress-container">
+                    <svg class="leetcode-svg" viewBox="0 0 100 100">
+                        <circle class="track-bg easy-bg" cx="50" cy="50" r="40"></circle>
+                        <circle class="track-bg med-bg" cx="50" cy="50" r="40"></circle>
+                        <circle class="track-bg hard-bg" cx="50" cy="50" r="40"></circle>
+                        
+                        <circle class="segment easy-seg" id="easy-seg" cx="50" cy="50" r="40"></circle>
+                        <circle class="segment med-seg" id="med-seg" cx="50" cy="50" r="40"></circle>
+                        <circle class="segment hard-seg" id="hard-seg" cx="50" cy="50" r="40"></circle>
+                    </svg>
+                    <div class="leetcode-center-text">
+                        <div class="solved-count">
+                            <span id="lc-solved">--</span><span class="total-count">/<span id="lc-total">--</span></span>
+                        </div>
+                        <div class="solved-label">Solved</div>
+                        <div class="attempting-label"><span id="lc-attempting">--</span> Attempting</div>
+                    </div>
+                </div>
+                <div class="leetcode-stats">
+                    <div class="stat-box">
+                        <div class="stat-header easy-text">Easy</div>
+                        <div class="stat-value" id="lc-easy-stat">--/--</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-header med-text">Med.</div>
+                        <div class="stat-value" id="lc-med-stat">--/--</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-header hard-text">Hard</div>
+                        <div class="stat-value" id="lc-hard-stat">--/--</div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -248,6 +284,165 @@
                     // requestAnimationFrame(draw);
                     // }
                     // draw();
+
+        // LeetCode Stats Fetching and Dynamic Rendering
+        (function () {
+            const username = "sidisreal";
+            const apiUrl = `https://alfa-leetcode-api.onrender.com/${username}/profile`;
+
+            const solvedEl = document.getElementById('lc-solved');
+            const totalEl = document.getElementById('lc-total');
+            const attemptingEl = document.getElementById('lc-attempting');
+            const easyStatEl = document.getElementById('lc-easy-stat');
+            const medStatEl = document.getElementById('lc-med-stat');
+            const hardStatEl = document.getElementById('lc-hard-stat');
+
+            const easySeg = document.getElementById('easy-seg');
+            const medSeg = document.getElementById('med-seg');
+            const hardSeg = document.getElementById('hard-seg');
+
+            const tracks = {
+                easy: document.querySelector('.easy-bg'),
+                med: document.querySelector('.med-bg'),
+                hard: document.querySelector('.hard-bg')
+            };
+
+            const segments = {
+                easy: easySeg,
+                med: medSeg,
+                hard: hardSeg
+            };
+
+            // Circumference for r=40 is 2 * PI * 40 = 251.327
+            const C = 2 * Math.PI * 40;
+
+            // Set initial state (empty)
+            Object.values(tracks).forEach(t => {
+                if (t) {
+                    t.style.strokeDasharray = `0 ${C}`;
+                    t.style.strokeDashoffset = "0";
+                }
+            });
+            Object.values(segments).forEach(s => {
+                if (s) {
+                    s.style.strokeDasharray = `0 ${C}`;
+                    s.style.strokeDashoffset = "0";
+                }
+            });
+
+            const updateArc = (key, startAngle, totalAngle, solvedCount, totalCount) => {
+                const track = tracks[key];
+                const seg = segments[key];
+                if (!track || !seg) return;
+
+                // Circumference lengths
+                const trackLength = (totalAngle / 360) * C;
+                const solvedRatio = totalCount > 0 ? Math.min(1, solvedCount / totalCount) : 0;
+                const solvedLength = solvedRatio * trackLength;
+
+                // Offset formula: offset = -(startAngle / 360) * C
+                const offset = -(startAngle / 360) * C;
+
+                // Set tracks (dim color)
+                track.style.strokeDasharray = `${trackLength} ${C}`;
+                track.style.strokeDashoffset = offset;
+
+                // Set segments (bright color)
+                seg.style.strokeDasharray = `${solvedLength} ${C}`;
+                seg.style.strokeDashoffset = offset;
+            };
+
+            const renderData = (data) => {
+                const totalSolved = data.totalSolved || 0;
+                const totalQuestions = data.totalQuestions || 1;
+                const easySolved = data.easySolved || 0;
+                const totalEasy = data.totalEasy || 1;
+                const mediumSolved = data.mediumSolved || 0;
+                const totalMedium = data.totalMedium || 1;
+                const hardSolved = data.hardSolved || 0;
+                const totalHard = data.totalHard || 1;
+
+                // "Attempting" = totalSubmissions (All) - totalSolved
+                let totalSubsAll = totalSolved;
+                if (data.totalSubmissions && Array.isArray(data.totalSubmissions)) {
+                    const allSub = data.totalSubmissions.find(s => s.difficulty === 'All');
+                    if (allSub) {
+                        totalSubsAll = allSub.count;
+                    }
+                } else if (data.matchedUserStats && data.matchedUserStats.totalSubmissionNum) {
+                    const allSub = data.matchedUserStats.totalSubmissionNum.find(s => s.difficulty === 'All');
+                    if (allSub) {
+                        totalSubsAll = allSub.count;
+                    }
+                }
+                const attempting = Math.max(0, totalSubsAll - totalSolved);
+
+                // Update UI text
+                solvedEl.textContent = totalSolved;
+                totalEl.textContent = totalQuestions;
+                attemptingEl.textContent = attempting;
+                easyStatEl.textContent = `${easySolved}/${totalEasy}`;
+                medStatEl.textContent = `${mediumSolved}/${totalMedium}`;
+                hardStatEl.textContent = `${hardSolved}/${totalHard}`;
+
+                // Math for segments
+                const gapDegrees = 5;
+                const totalGaps = 3;
+                const totalDegrees = 360 - (gapDegrees * totalGaps); // 345
+
+                const easyRatio = totalEasy / totalQuestions;
+                const medRatio = totalMedium / totalQuestions;
+                const hardRatio = totalHard / totalQuestions;
+
+                const easyAngle = easyRatio * totalDegrees;
+                const medAngle = medRatio * totalDegrees;
+                const hardAngle = hardRatio * totalDegrees;
+
+                // Starting positions (angles clockwise, where 3 o'clock is 0)
+                // Medium at the top: starts at -150deg
+                const medStart = -150;
+                const hardStart = medStart + medAngle + gapDegrees;
+                const easyStart = hardStart + hardAngle + gapDegrees;
+
+                updateArc('med', medStart, medAngle, mediumSolved, totalMedium);
+                updateArc('hard', hardStart, hardAngle, hardSolved, totalHard);
+                updateArc('easy', easyStart, easyAngle, easySolved, totalEasy);
+            };
+
+            const renderFallback = () => {
+                // fallback hardcoded/static values from user screenshot if offline/error
+                solvedEl.textContent = "121";
+                totalEl.textContent = "3991";
+                attemptingEl.textContent = "3";
+                easyStatEl.textContent = "66/954";
+                medStatEl.textContent = "44/2084";
+                hardStatEl.textContent = "11/953";
+
+                const medStart = -150;
+                const hardStart = 34;
+                const easyStart = 122;
+                
+                updateArc('med', medStart, 180, 44, 2084);
+                updateArc('hard', hardStart, 84, 11, 953);
+                updateArc('easy', easyStart, 84, 66, 954);
+            };
+
+            fetch(apiUrl)
+                .then(res => {
+                    if (!res.ok) throw new Error("Failed to fetch LeetCode data");
+                    return res.json();
+                })
+                .then(data => {
+                    if (!data || data.error || typeof data.totalSolved === 'undefined') {
+                        throw new Error("Invalid LeetCode data format");
+                    }
+                    renderData(data);
+                })
+                .catch(err => {
+                    console.error("LeetCode widget API error, rendering fallback:", err);
+                    renderFallback();
+                });
+        })();
 
     </script>
 
