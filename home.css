@@ -312,6 +312,7 @@
     text-decoration: none;    
 }
 
+
   .cp{
     height: 2.5vh;
     width: 2.5vh;
@@ -385,6 +386,18 @@
             margin-left: -0.5rem;
 
         }
+    
+        .cp-links{
+            display: flex;
+            justify-content: center;
+        }
+
+        .cp-list{
+            display: inline-flex;
+            justify-content:center;
+            flex-direction: column;
+        }
+
     }
 
     #gitA{
@@ -413,6 +426,7 @@
     /* move left to show latest months */
 }
 
+
 @media (max-width: 400) {
     .github-heatmap {
         width: 200px;
@@ -429,6 +443,18 @@
         transform: translateX(-400px);
         /* move left to show latest months */
     }
+
+    .cp-links{
+        display: flex;
+        justify-content: center;
+    }
+
+    .cp-list, .link{
+        display: inline-flex;
+        justify-content:center;
+        flex-direction: column;
+    }
+
 }
 
 .terminal-line {
