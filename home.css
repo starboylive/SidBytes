@@ -597,46 +597,39 @@ html {
 
 
 @media (max-width: 768px) {
-
-    
-
-    .linkstation{
-        font-size:1rem;
-        margin-left:-0.5rem;
+    .linkstation {
+        font-size: 1rem;
+        margin-left: -0.5rem;
     }
 
-    .cp-links{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:1.5rem;
+    .cp-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
-    .cp-list{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
+    .cp-list {
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
-    .link{
-        font-weight:500;
+    .link {
+        font-weight: 500;
     }
 
-    /* GitHub Heatmap */
-    .github-heatmap{
-        width:100%;
-        height:110px;
-        overflow:hidden;
-        border-radius:6px;
+    .github-heatmap {
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
     }
 
-    .github-heatmap img{
-        width:260%;              /* Zoom */
-        max-width:none;
-        margin-left:1px;      /* Move image */
-        margin-top:2px;         /* Optional */
+    .github-heatmap img {
+        width: 220%;
+        max-width: none;
+        margin-left: -120px;
     }
 }
 
@@ -667,34 +660,37 @@ html {
 }
 
 
-@media (max-width:400px){
-
-    .github-heatmap{
-        width:100%;
-        height:15vh;
-        overflow:hidden;
-        border-radius:6px;
+@media (max-width: 400) {
+    .github-heatmap {
+        width: 100px;
+        /* whatever fits your sidebar */
+        /* height: 45px; */
+        /* zooms into last few months */
+        overflow: hidden;
+        /* hides old months */
+        border-radius: 6px;
     }
 
-    .github-heatmap img{
-        width:200%;              /* More zoom */
-        max-width:none;
-        margin-left:-325px;      /* Adjust until it looks right */
-        margin-top:8px;
+    .github-heatmap img {
+        width: 100%;
+        /* zoom in horizontally */
+        transform: translateX(-200px);
+        /* move left to show latest months */
     }
 
-    .cp-links{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:1.5rem;
+    .cp-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
-    .cp-list{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+    .cp-list,
+    .link {
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
