@@ -4,17 +4,17 @@
     box-sizing: border-box;
     background-color: rgb(255, 254, 249);
     color: aliceblue;
-  }
+}
 
-  body{
+body {
     background-color: transparent;
-  }
+}
 
-  html{
+html {
     background-color: transparent;
-  }
+}
 
-.main{
+.main {
     background-color: transparent;
     height: 70vh;
     width: 70vh;
@@ -24,24 +24,24 @@
     color: aliceblue;
 }
 
-.nav-bar{
+.nav-bar {
     height: 3vh;
     width: 50vh;
-    font-family:  monospace;
-    background-color: transparent; 
+    font-family: monospace;
+    background-color: transparent;
     gap: 2.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
-}  
 
-.gap{
+}
+
+.gap {
     height: 2vh;
     /* background-color: cyan;ś */
 }
 
-#home-spec{
+#home-spec {
     font-family: monospace;
     background-color: blue;
     border: 0;
@@ -50,14 +50,15 @@
     font-size: 1rem;
 
 }
-#home-spec:hover{
+
+#home-spec:hover {
     background-color: blue;
     color: aliceblue;
     cursor: pointer;
 }
 
-#home{
-    font-family:  monospace;
+#home {
+    font-family: monospace;
     background-color: transparent;
     color: rgb(0, 0, 0);
     border: 0;
@@ -65,28 +66,31 @@
     font-size: 1rem;
     font-weight: 600;
 }
-#home:hover{
+
+#home:hover {
     background-color: blue;
     color: aliceblue;
     cursor: pointer;
 }
-#division{
+
+#division {
     height: 0.0244rem;
     background-color: black;
     /* color: bisque; */
     border: 0;
 }
-.info-block{
+
+.info-block {
     color: rgb(0, 0, 0);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     font-size: 5rem;
-    
+
 }
 
-.info-block-2{
+.info-block-2 {
     color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -94,68 +98,74 @@
     gap: 0.2rem;
     margin: 0;
     border: 0;
-     margin-top: 2rem;
+    margin-top: 2rem;
 }
 
-#webdec{
+#webdec {
     /* font-weight: bold; */
     font-size: 1.1rem;
     color: blue;
 }
 
-#zuck{
+#zuck {
     height: 18vh;
     border-radius: 1rem;
     margin-top: 2.2rem;
 }
 
-#intro{
+#intro {
     font-size: 1rem;
     color: black;
-    font-family:  monospace;
+    font-family: monospace;
 }
-#home2{
+
+#home2 {
     font-family: monospace;
     font-size: 1.1rem;
     background-color: transparent;
     border: 0;
     color: blue;
 
-    
+
 }
-#home2:hover{
+
+#home2:hover {
     background-color: blue;
     color: aliceblue;
     cursor: pointer;
 }
-#home3{
-    font-family:  monospace;
+
+#home3 {
+    font-family: monospace;
     font-size: 1.1rem;
     background-color: transparent;
     border: 0;
     color: blue;
     padding-bottom: 1rem;
 }
-#home3:hover{
+
+#home3:hover {
     background-color: blue;
     color: aliceblue;
     cursor: pointer;
 }
 
-#home4{
-    font-family:  monospace;
+#home4 {
+    font-family: monospace;
     background-color: transparent;
     border: 0;
     padding: 0.5rem;
     font-size: 1rem;
     color: #FF0000;
 }
-#home4:hover{
+
+#home4:hover {
     background-color: #FF0000;
     color: aliceblue;
     cursor: pointer;
 }
-#home5{
+
+#home5 {
     font-family: monospace;
     background-color: transparent;
     border: 0;
@@ -163,12 +173,14 @@
     font-size: 1rem;
     color: blue;
 }
-#home5:hover{
+
+#home5:hover {
     background-color: blue;
     color: aliceblue;
     cursor: pointer;
 }
-#home69{
+
+#home69 {
     font-family: monospace;
     background-color: transparent;
     border: 0;
@@ -176,17 +188,19 @@
     font-size: 1rem;
     color: blue;
 }
-#home69:hover{
+
+#home69:hover {
     background-color: blue;
-    color:rgb(255, 230, 0);
+    color: rgb(255, 230, 0);
     cursor: pointer;
 }
-.gap32{
+
+.gap32 {
     height: 1vh;
     /* background-color: cyan;ś */
 }
 
-#home6{
+#home6 {
     font-family: monospace;
     background-color: transparent;
     color: black;
@@ -195,32 +209,34 @@
     font-size: 1rem;
     text-align: center;
 }
+
 /* #home6:hover{
     background-color: blue;
     color: aliceblue;
     cursor: pointer;
 } */
 
-.bottoms{
-    height: 15vh;    
+.bottoms {
+    height: 15vh;
 }
 
-#resume{
-    font-family:  monospace;
+#resume {
+    font-family: monospace;
     background-color: transparent;
     border: 0;
     padding: 0.4rem;
     font-size: 1rem;
     color: green;
     float: right;
-    margin-top: -0.050rem ;
+    margin-top: -0.050rem;
     /* margin-right: 0.5rem; */
     transition: all 0.2s ease;
     background-color: yellowgreen;
     color: black;
     border-radius: 0.5rem;
 }
-#resume:hover{
+
+#resume:hover {
     background-color: green;
     color: aliceblue;
     cursor: pointer;
@@ -230,64 +246,67 @@
 /* Responsive for mobile */
 @media (max-width: 768px) {
     .main {
-      width: 90vw;
-      height: auto;
-      padding: 1rem;
+        width: 90vw;
+        height: auto;
+        padding: 1rem;
     }
-  
+
     .nav-bar {
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 0.5rem;
-      font-size: 0.9rem;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0.5rem;
+        font-size: 0.9rem;
     }
-  
+
     .info-block {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
-  
+
     .info-block-2 {
-      align-items: center;
-      text-align: center;
-      margin-top: 0.5rem;
+        align-items: center;
+        text-align: center;
+        margin-top: 0.5rem;
     }
-  
+
     #zuck {
-      height: 20vh;
-      width: auto;
-      margin-top: 0.5rem;
+        height: 20vh;
+        width: auto;
+        margin-top: 0.5rem;
     }
-  
+
     .year-block {
-      text-align: center;
-      padding: 0.5rem;
+        text-align: center;
+        padding: 0.5rem;
     }
-  
+
     .social-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
     }
-  
-    .top-gap, .gap, .gap32, .bottoms {
-      height: 2vh;
+
+    .top-gap,
+    .gap,
+    .gap32,
+    .bottoms {
+        height: 2vh;
     }
-  
+
     #intro {
-      font-size: 0.95rem;
+        font-size: 0.95rem;
     }
-  
+
     button {
-      font-size: 0.9rem !important;
-      padding: 0.3rem !important;
+        font-size: 0.9rem !important;
+        padding: 0.3rem !important;
     }
-  }
-  
-  .ps-btn{ 
+}
+
+.ps-btn {
     color: black;
     margin-top: 0.2rem;
     list-style-type: none;
@@ -297,24 +316,26 @@
     padding-right: 1rem;
     font-size: 0.98rem;
     font-family: monospace;
-    font-weight: 500; 
+    font-weight: 500;
     border: 0;
 }
-.ps-btn:hover{
+
+.ps-btn:hover {
     cursor: pointer;
     border: 0.1rem solid black;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
-.link:hover{
+
+.link:hover {
     border: 0;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 
-  .cp{
+.cp {
     height: 2.5vh;
     width: 2.5vh;
     border-radius: 2rem;
@@ -322,9 +343,9 @@
     /* display: flex;
     justify-content: space-around; */
 
-  }
+}
 
-  /* .linkstation {
+/* .linkstation {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1rem;
     background-color: transparent;
@@ -345,13 +366,33 @@
         cursor: pointer;
     } */
 
-    /* RGB Animation */
+/* RGB Animation */
 @keyframes rgbCycle {
-  0%   { color: rgb(255, 0, 0); }      /* Red */
-  25%  { color: rgb(156, 156, 0); }    /* Yellow */
-  50%  { color: rgb(0, 255, 0); }      /* Green */
-  75%  { color: rgb(0, 170, 255); }    /* Blue */
-  100% { color: rgb(255, 0, 255); }    /* Magenta */
+    0% {
+        color: rgb(255, 0, 0);
+    }
+
+    /* Red */
+    25% {
+        color: rgb(156, 156, 0);
+    }
+
+    /* Yellow */
+    50% {
+        color: rgb(0, 255, 0);
+    }
+
+    /* Green */
+    75% {
+        color: rgb(0, 170, 255);
+    }
+
+    /* Blue */
+    100% {
+        color: rgb(255, 0, 255);
+    }
+
+    /* Magenta */
 }
 
 .linkstation {
@@ -376,7 +417,8 @@
     background-color: rgb(76, 0, 255);
     color: aliceblue !important;
     cursor: pointer;
-    animation: none; /* stop anim on hover if you want solid color */
+    animation: none;
+    /* stop anim on hover if you want solid color */
     font-size: 1.2rem;
 }
 
@@ -435,9 +477,11 @@
 .leetcode-svg .easy-bg {
     stroke: rgba(0, 184, 163, 0.12);
 }
+
 .leetcode-svg .med-bg {
     stroke: rgba(255, 192, 30, 0.12);
 }
+
 .leetcode-svg .hard-bg {
     stroke: rgba(239, 71, 67, 0.12);
 }
@@ -453,9 +497,11 @@
 .leetcode-svg .easy-seg {
     stroke: rgb(0, 184, 163);
 }
+
 .leetcode-svg .med-seg {
     stroke: rgb(255, 192, 30);
 }
+
 .leetcode-svg .hard-seg {
     stroke: rgb(239, 71, 67);
 }
@@ -532,9 +578,11 @@
 .leetcode-stats .easy-text {
     color: rgb(0, 184, 163) !important;
 }
+
 .leetcode-stats .med-text {
     color: rgb(255, 192, 30) !important;
 }
+
 .leetcode-stats .hard-text {
     color: rgb(239, 71, 67) !important;
 }
@@ -548,45 +596,61 @@
 }
 
 
-    @media (max-width: 768px) {
-        .linkstation {
-            font-size: 1rem;
-            margin-left: -0.5rem;
+@media (max-width: 768px) {
 
-        }
     
-        .cp-links{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-        }
 
-        .cp-list{
-            display: inline-flex;
-            justify-content:center;
-            flex-direction: column;
-    
-        }
-         .link{
-            font-weight: 500;
-         }
-
-
+    .linkstation{
+        font-size:1rem;
+        margin-left:-0.5rem;
     }
 
-    #gitA{
-    font-family:  monospace;
+    .cp-links{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:1.5rem;
+    }
+
+    .cp-list{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .link{
+        font-weight:500;
+    }
+
+    /* GitHub Heatmap */
+    .github-heatmap{
+        width:100%;
+        height:110px;
+        overflow:hidden;
+        border-radius:6px;
+    }
+
+    .github-heatmap img{
+        width:260%;              /* Zoom */
+        max-width:none;
+        margin-left:1px;      /* Move image */
+        margin-top:2px;         /* Optional */
+    }
+}
+
+#gitA {
+    font-family: monospace;
     background-color: transparent;
     border: 0;
     padding: 0.5rem;
     /* font-size: 1rem; */
     color: black;
     /* margin-top: 1rem; */
-    }
+}
 
-    .github-heatmap {
+.github-heatmap {
     width: 100%;
     /* whatever fits your sidebar */
     /* height: 45px;               zooms into last few months */
@@ -603,39 +667,35 @@
 }
 
 
-@media (max-width: 400) {
-    .github-heatmap {
-        width: 200px;
-        /* whatever fits your sidebar */
-        /* height: 45px;               zooms into last few months */
-        overflow: hidden;
-        /* hides old months */
-        border-radius: 6px;
+@media (max-width:400px){
+
+    .github-heatmap{
+        width:100%;
+        height:15vh;
+        overflow:hidden;
+        border-radius:6px;
     }
 
-    .github-heatmap img {
-        width: 600px;
-        /* zoom in horizontally */
-        transform: translateX(-400px);
-        /* move left to show latest months */
+    .github-heatmap img{
+        width:200%;              /* More zoom */
+        max-width:none;
+        margin-left:-325px;      /* Adjust until it looks right */
+        margin-top:8px;
     }
 
     .cp-links{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-
-    .cp-list, .link{
-        display: inline-flex;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
         justify-content:center;
-        flex-direction: column;
-
+        gap:1.5rem;
     }
-         
 
+    .cp-list{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
 }
 
 .terminal-line {
@@ -664,14 +724,14 @@
     font-weight: 800;
     line-height: 1;
     transform: translateY(-2px);
-    opacity: 0.95; 
+    opacity: 0.95;
     /* margin-left: -1rem; */
 }
 
 
 @media (prefers-reduced-motion: reduce) {
     .cursor {
-        animation:none;
+        animation: none;
     }
 }
 
@@ -685,6 +745,7 @@
     margin-top: 0.2rem;
     animation: blink 0.5s steps(2, start) infinite
 }
+
 /* 
 #summer {
   position: fixed;
@@ -699,12 +760,12 @@
 
 /* Container needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
-.more-btn{
- font-family:  monospace;
+.more-btn {
+    font-family: monospace;
     background-color: transparent;
     color: rgb(0, 0, 0);
     border: 0;
@@ -712,36 +773,38 @@
     font-size: 1rem;
     font-weight: 600;
 }
-.more-btn:hover{
-       background-color: blue;
+
+.more-btn:hover {
+    background-color: blue;
     color: aliceblue;
     cursor: pointer;
 }
+
 /* Hide the dropdown menu by default and position it */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 4px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
 }
 
 /* Style the links inside the dropdown */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
 /* Show class to be toggled via JavaScript */
 .show {
-  display: block;
+    display: block;
 }
