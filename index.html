@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidbytes</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css" integrity="sha512-F/yRpRY8sctKzP7exU5PLGejwg/QtjDX6CIy/41nApe7JqdZgCcCzJTNq9Rcp/XwbeeTGillGevBakruY15pxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css"
+        integrity="sha512-F/yRpRY8sctKzP7exU5PLGejwg/QtjDX6CIy/41nApe7JqdZgCcCzJTNq9Rcp/XwbeeTGillGevBakruY15pxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="images/zuck-modified.png" type="image/x-icon">
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
-        
+
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
         data-id="sidisreal" data-description="Support me on Buy me a coffee!" data-message="" data-color="white"
         data-emoji="☕" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
@@ -24,8 +26,19 @@
             <a href="portfolio.html"><button id="home">~/.projects</button></a>
             <a href="https://sidframe.vercel.app" target="_blank"><button id="home">~/.blog</button></a>
             <!-- <button id="home">~/.stacks</button> -->
-            <button id="home">~/...</button>
+            
+            <div class="dropdown home">
+               <button id="more-btn" class="dropdown-button more-btn">~/.more</button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="#html">HTML</a>
+                    <a href="#css">CSS</a>
+                    <a href="#javascript">JavaScript</a>
+                </div>
+            </div>
         </div>
+
+
+
 
         <div class="gap"></div>
 
@@ -84,12 +97,25 @@
             <div class="gap"></div>
 
             <ul class="cp-list">
-                <li><a class="ps-btn link" href="https://leetcode.com/u/sidisreal" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/leetCode.png" alt="logo"></span>Leetcode</button></a></li>
-                <li><a class="ps-btn link" href="https://codeforces.com/profile/starboysiddhu" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/codeforces.png" alt="logo"></span>Codeforces</button></a></li>
-                <li><a class="ps-btn link" href="https://www.codechef.com/users/starboysid" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/codechef.png" alt="logo"></span>Codechef</button></a></li>
-                <li><a class="ps-btn link" href="https://www.naukri.com/code360/profile/95386a20-4da3-4e23-bf17-05c98d7b8def" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/codeninjas.png" alt="logo"></span>Codeninjas</button></a></li>
-                <li><a class="ps-btn link" href="https://www.hackerrank.com/profile/ramadalivenkate1" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/hackerRank.png" alt="logo"></span>HackerRank</button></a></li>
-                <li><a class="ps-btn link" href="https://www.geeksforgeeks.org/profile/sidwaters" target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/gfg.png" alt="logo"></span>GeeksForGeeks</button></a></li>
+                <li><a class="ps-btn link" href="https://leetcode.com/u/sidisreal" target="_blank"><button
+                            class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/leetCode.png"
+                                    alt="logo"></span>Leetcode</button></a></li>
+                <li><a class="ps-btn link" href="https://codeforces.com/profile/starboysiddhu" target="_blank"><button
+                            class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/codeforces.png"
+                                    alt="logo"></span>Codeforces</button></a></li>
+                <li><a class="ps-btn link" href="https://www.codechef.com/users/starboysid" target="_blank"><button
+                            class="ps-btn"><span class="cp logo"><img class="cp logo" src="CP_images/codechef.png"
+                                    alt="logo"></span>Codechef</button></a></li>
+                <li><a class="ps-btn link"
+                        href="https://www.naukri.com/code360/profile/95386a20-4da3-4e23-bf17-05c98d7b8def"
+                        target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo"
+                                    src="CP_images/codeninjas.png" alt="logo"></span>Codeninjas</button></a></li>
+                <li><a class="ps-btn link" href="https://www.hackerrank.com/profile/ramadalivenkate1"
+                        target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo"
+                                    src="CP_images/hackerRank.png" alt="logo"></span>HackerRank</button></a></li>
+                <li><a class="ps-btn link" href="https://www.geeksforgeeks.org/profile/sidwaters"
+                        target="_blank"><button class="ps-btn"><span class="cp logo"><img class="cp logo"
+                                    src="CP_images/gfg.png" alt="logo"></span>GeeksForGeeks</button></a></li>
             </ul>
 
             <div class="leetcode-card" id="leetcode-card">
@@ -98,14 +124,15 @@
                         <circle class="track-bg easy-bg" cx="50" cy="50" r="40"></circle>
                         <circle class="track-bg med-bg" cx="50" cy="50" r="40"></circle>
                         <circle class="track-bg hard-bg" cx="50" cy="50" r="40"></circle>
-                        
+
                         <circle class="segment easy-seg" id="easy-seg" cx="50" cy="50" r="40"></circle>
                         <circle class="segment med-seg" id="med-seg" cx="50" cy="50" r="40"></circle>
                         <circle class="segment hard-seg" id="hard-seg" cx="50" cy="50" r="40"></circle>
                     </svg>
                     <div class="leetcode-center-text">
                         <div class="solved-count">
-                            <span id="lc-solved">--</span><span class="total-count">/<span id="lc-total">--</span></span>
+                            <span id="lc-solved">--</span><span class="total-count">/<span
+                                    id="lc-total">--</span></span>
                         </div>
                         <div class="solved-label">Solved</div>
                         <div class="attempting-label"><span id="lc-attempting">--</span> Attempting</div>
@@ -155,7 +182,7 @@
             <p id="intro">looking out for <span id="webdec">gfx</span> gigs</p>
 
             <p id="intro">currently doing DSA in <span id="webdec">C++</span></p>
-        
+
 
             <div class="gap"></div>
             <h3 id="year"> <button id="home3">2026</button> </h3>
@@ -163,28 +190,29 @@
             <p id="intro">started taking coding more seriously</p>
 
             <p id="intro">
-            built and shipped
-            <a href="https://sidframe.vercel.app" target="_blank"><span id="home2">sidframe</span></a>,
-            <a href="https://sidbytes.vercel.app" target="_blank"><span id="home2">sidbytes</span></a> and
-            <a href="https://github.com/starboylive/DevSync" target="_blank"><span id="home2">devsync</span></a> and
+                built and shipped
+                <a href="https://sidframe.vercel.app" target="_blank"><span id="home2">sidframe</span></a>,
+                <a href="https://sidbytes.vercel.app" target="_blank"><span id="home2">sidbytes</span></a> and
+                <a href="https://github.com/starboylive/DevSync" target="_blank"><span id="home2">devsync</span></a> and
             </p>
 
             <p id="intro">
-            learned <span id="webdec">javascript</span> and started
-            <span id="webdec">react/frontend</span>
+                learned <span id="webdec">javascript</span> and started
+                <span id="webdec">react/frontend</span>
             </p>
 
             <p id="intro">
-            became consistent with
-            <a href="https://sidframe.vercel.app" target="_blank"><span id="home2">leetcode</span></a>,
-            <a href="https://codeforces.com/profile/starboysiddhu" target="_blank"><span id="home2">codeforces</span></a> and
-            <a href="https://www.codechef.com/users/starboysid" target="_blank"><span id="home2">codechef</span></a>
+                became consistent with
+                <a href="https://sidframe.vercel.app" target="_blank"><span id="home2">leetcode</span></a>,
+                <a href="https://codeforces.com/profile/starboysiddhu" target="_blank"><span
+                        id="home2">codeforces</span></a> and
+                <a href="https://www.codechef.com/users/starboysid" target="_blank"><span id="home2">codechef</span></a>
             </p>
 
             <p id="intro">started preparing for gate 2027</p>
 
             <p id="intro">
-            currently building projects in public and improving every day
+                currently building projects in public and improving every day
             </p>
             <br>
             <p id="intro">i do fun projects</p>
@@ -221,7 +249,7 @@
         </div>
         <div class="bottoms"></div>
     </div>
-<!-- <canvas id="summer"></canvas> -->
+    <!-- <canvas id="summer"></canvas> -->
 
     <script>
         (function () {
@@ -270,51 +298,51 @@
         })();
 
         //   Summer Effect 
-                    // const canvas = document.getElementById("summer");
-                    // const ctx = canvas.getContext("2d");
+        // const canvas = document.getElementById("summer");
+        // const ctx = canvas.getContext("2d");
 
-                    // let particles = [];
+        // let particles = [];
 
-                    // function resize() {
-                    // canvas.width = window.innerWidth;
-                    // canvas.height = window.innerHeight;
-                    // }
-                    // resize();
-                    // window.addEventListener("resize", resize);
+        // function resize() {
+        // canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight;
+        // }
+        // resize();
+        // window.addEventListener("resize", resize);
 
-                    // for (let i = 0; i < 100; i++) {
-                    // particles.push({
-                    //     x: Math.random() * canvas.width,
-                    //     y: Math.random() * canvas.height,
-                    //     r: Math.random() * 3 + 1,
-                    //     dx: Math.random() * 0.3 - 0.15,
-                    //     dy: Math.random() * 0.3 - 0.15,
-                    //     opacity: Math.random() * 0.5 + 0.2
-                    // });
-                    // }
+        // for (let i = 0; i < 100; i++) {
+        // particles.push({
+        //     x: Math.random() * canvas.width,
+        //     y: Math.random() * canvas.height,
+        //     r: Math.random() * 3 + 1,
+        //     dx: Math.random() * 0.3 - 0.15,
+        //     dy: Math.random() * 0.3 - 0.15,
+        //     opacity: Math.random() * 0.5 + 0.2
+        // });
+        // }
 
-                    // function draw() {
-                    // ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // function draw() {
+        // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                    // particles.forEach(p => {
-                    //     ctx.beginPath();
-                    //     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                    //     ctx.fillStyle = `rgba(255, 223, 150, ${p.opacity})`;
-                    //     ctx.fill();
+        // particles.forEach(p => {
+        //     ctx.beginPath();
+        //     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        //     ctx.fillStyle = `rgba(255, 223, 150, ${p.opacity})`;
+        //     ctx.fill();
 
-                    //     p.x += p.dx;
-                    //     p.y += p.dy;
+        //     p.x += p.dx;
+        //     p.y += p.dy;
 
-                    //     // loop around
-                    //     if (p.x > canvas.width) p.x = 0;
-                    //     if (p.x < 0) p.x = canvas.width;
-                    //     if (p.y > canvas.height) p.y = 0;
-                    //     if (p.y < 0) p.y = canvas.height;
-                    // });
+        //     // loop around
+        //     if (p.x > canvas.width) p.x = 0;
+        //     if (p.x < 0) p.x = canvas.width;
+        //     if (p.y > canvas.height) p.y = 0;
+        //     if (p.y < 0) p.y = canvas.height;
+        // });
 
-                    // requestAnimationFrame(draw);
-                    // }
-                    // draw();
+        // requestAnimationFrame(draw);
+        // }
+        // draw();
 
         // LeetCode Stats Fetching and Dynamic Rendering
         (function () {
@@ -452,7 +480,7 @@
                 const medStart = -150;
                 const hardStart = 34;
                 const easyStart = 122;
-                
+
                 updateArc('med', medStart, 180, 44, 2084);
                 updateArc('hard', hardStart, 84, 11, 953);
                 updateArc('easy', easyStart, 84, 66, 954);
@@ -474,6 +502,24 @@
                     renderFallback();
                 });
         })();
+
+        const dropdownBtn = document.getElementById("more-btn");
+        const dropdownContent = document.getElementById("dropdown-content");
+
+        // Toggle visibility when clicking the button
+        dropdownBtn.addEventListener("click", () => {
+            dropdownContent.classList.toggle("show");
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener("click", (event) => {
+            if (!event.target.matches('.more-btn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+
 
     </script>
 
