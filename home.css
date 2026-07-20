@@ -629,7 +629,7 @@ html {
     .github-heatmap img {
         width: 220%;
         max-width: none;
-        margin-left: -120px;
+        margin-left: -10px;
     }
 }
 
