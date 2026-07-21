@@ -32,3 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(err);
     });
 });
+
+        const dropdownBtn = document.getElementById("more-btn");
+        const dropdownContent = document.getElementById("dropdown-content");
+
+        // Toggle visibility when clicking the button
+        dropdownBtn.addEventListener("click", () => {
+            dropdownContent.classList.toggle("show");
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener("click", (event) => {
+            if (!event.target.matches('.more-btn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
