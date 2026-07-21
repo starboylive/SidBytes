@@ -810,5 +810,14 @@ html {
         margin-left: -2.3rem;
         padding: 1px 1px; 
         min-width: 80px;
+        margin-top: 0.5rem;
+    }
+}
+@media (max-width: 400px) {
+    .dropdown-content{
+        margin-left: -2.3rem;
+        padding: 1px 1px; 
+        min-width: 80px;
+        margin-top: 0.5rem;
     }
 }
